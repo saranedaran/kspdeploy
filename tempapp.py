@@ -25,7 +25,7 @@ def predict():
     attribute = request.form['attribute']
     attribute_vectorized = tfidf_vectorizer.transform([attribute])
     prediction = best_gb_model.predict(attribute_vectorized)[0]
-    return render_template('prediction.html', attribute=attribute, prediction=prediction)
+    return render_template('Prediction.html', attribute=attribute, prediction=prediction)
 
 
 @app.route('/', methods=['GET', 'POST'])
